@@ -12,11 +12,18 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-    
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.7
-      - run: gradle assembleDebug
+      - name: Build
+        run: |
+          set +e
+          gradle assembleDebug —console=plain > build.log 2>&1
+          code=$?
+          if [ $code -ne 0 ]; then
+            grep -E «^e: |error:|What went wrong|Execution failed|AAPT|Caused by» -A2 build.log | head -40 | while IFS= read -r l; do echo «::error::$l»; done
+          fi
+          exit $code
       - uses: actions/upload-artifact@v4
         with:
           name: SimpleLauncher-apk
