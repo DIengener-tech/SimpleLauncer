@@ -1,7 +1,7 @@
 package com.example.simplelauncher
 
 import android.content.Context
-import android.graphics.AdaptiveIconDrawable
+import android.graphics.drawawable.AdaptiveIconDrawable
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Color
