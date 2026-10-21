@@ -23,4 +23,5 @@ android {
 
 dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.viewpager:viewpager:1.0.0")
 }

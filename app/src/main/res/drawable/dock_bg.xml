@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Скляна полиця док-панелі -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#E0141820"
+                android:startColor="#C05A6270" />
+        </shape>
+    </item>
+    <!-- Відблиск у верхній половині -->
+    <item android:gravity="top" android:height="46dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#1CFFFFFF" />
+        </shape>
+    </item>
+    <!-- Світла лінія зверху -->
+    <item android:gravity="top" android:height="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#99FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

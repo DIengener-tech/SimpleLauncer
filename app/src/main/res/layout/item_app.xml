@@ -2,26 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
-    android:gravity="center_horizontal"
+    android:gravity="top|center_horizontal"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:paddingTop="4dp">
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="56dp"
-        android:layout_height="56dp" />
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:scaleType="fitCenter" />
 
     <TextView
         android:id="@+id/label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:maxLines="1"
-        android:shadowColor="#000000"
-        android:shadowRadius="4"
+        android:paddingHorizontal="2dp"
+        android:shadowColor="#CC000000"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="1.5"
         android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+        android:textSize="11sp" />
 </LinearLayout>
